@@ -1,3 +1,9 @@
+# revision 23685
+# category Package
+# catalog-ctan /info/fontname
+# catalog-date 2010-10-25 08:39:19 +0200
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-fontname
 Version:	20101025
 Release:	1
@@ -105,6 +111,7 @@ relation between foundry name and 'TeX-name' are also provided.
 %doc %{_texmfdistdir}/doc/fonts/fontname/xl2.html
 %doc %{_texmfdistdir}/doc/fonts/fontname/xt2.html
 %doc %{_infodir}/fontname.info*
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -117,3 +124,5 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_infodir}
 mv %{buildroot}%{_texmfdir}/doc/info/*.info %{buildroot}%{_infodir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
