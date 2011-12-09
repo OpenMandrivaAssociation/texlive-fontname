@@ -1,4 +1,4 @@
-# revision 23685
+# revision 24661
 # category Package
 # catalog-ctan /info/fontname
 # catalog-date 2010-10-25 08:39:19 +0200
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-fontname
 Version:	20101025
-Release:	1
+Release:	2
 Summary:	Scheme for naming fonts in TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/info/fontname
@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The scheme for assigning names is described (in the
@@ -26,19 +24,19 @@ documentation part of the package), and map files giving the
 relation between foundry name and 'TeX-name' are also provided.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
