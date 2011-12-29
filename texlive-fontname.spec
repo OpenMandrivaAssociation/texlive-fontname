@@ -23,16 +23,8 @@ The scheme for assigning names is described (in the
 documentation part of the package), and map files giving the
 relation between foundry name and 'TeX-name' are also provided.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -110,7 +102,6 @@ relation between foundry name and 'TeX-name' are also provided.
 %doc %{_texmfdistdir}/doc/fonts/fontname/xl2.html
 %doc %{_texmfdistdir}/doc/fonts/fontname/xt2.html
 %doc %{_infodir}/fontname.info*
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -123,5 +114,3 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_infodir}
 mv %{buildroot}%{_texmfdir}/doc/info/*.info %{buildroot}%{_infodir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
