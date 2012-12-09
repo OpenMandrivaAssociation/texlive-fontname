@@ -114,3 +114,21 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_infodir}
 mv %{buildroot}%{_texmfdir}/doc/info/*.info %{buildroot}%{_infodir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20101025-3
++ Revision: 752043
+- Rebuild to reduce used resources
+
+* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 20101025-2
++ Revision: 739752
+- texlive-fontname
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20101025-1
++ Revision: 718483
+- texlive-fontname
+- texlive-fontname
+- texlive-fontname
+- texlive-fontname
+
