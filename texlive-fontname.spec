@@ -1,12 +1,12 @@
-# revision 24661
+# revision 29725
 # category Package
 # catalog-ctan /info/fontname
-# catalog-date 2010-10-25 08:39:19 +0200
+# catalog-date 2012-07-06 23:09:35 +0200
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-fontname
-Version:	20101025
-Release:	3
+Version:	20120706
+Release:	1
 Summary:	Scheme for naming fonts in TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/info/fontname
@@ -110,25 +110,7 @@ relation between foundry name and 'TeX-name' are also provided.
 %build
 
 %install
-mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_texmfdistdir}
+cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
 mkdir -p %{buildroot}%{_infodir}
-mv %{buildroot}%{_texmfdir}/doc/info/*.info %{buildroot}%{_infodir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20101025-3
-+ Revision: 752043
-- Rebuild to reduce used resources
-
-* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 20101025-2
-+ Revision: 739752
-- texlive-fontname
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20101025-1
-+ Revision: 718483
-- texlive-fontname
-- texlive-fontname
-- texlive-fontname
-- texlive-fontname
-
+mv %{buildroot}%{_texmfdistdir}/doc/info/*.info %{buildroot}%{_infodir}
