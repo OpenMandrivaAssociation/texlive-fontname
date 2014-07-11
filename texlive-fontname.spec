@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-fontname
 Version:	20120706
-Release:	6
+Release:	7
 Summary:	Scheme for naming fonts in TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/info/fontname
