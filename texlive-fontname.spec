@@ -5,8 +5,8 @@
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-fontname
-Version:	20180303
-Release:	3
+Version:	20190228
+Release:	1
 Summary:	Scheme for naming fonts in TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/info/fontname
