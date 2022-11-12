@@ -1,18 +1,12 @@
-# revision 29725
-# category Package
-# catalog-ctan /info/fontname
-# catalog-date 2012-07-06 23:09:35 +0200
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-fontname
-Version:	20190228
+Version:	64477
 Release:	1
 Summary:	Scheme for naming fonts in TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/info/fontname
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontname.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontname.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontname.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontname.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ documentation part of the package), and map files giving the
 relation between foundry name and 'TeX-name' are also provided.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -105,7 +99,7 @@ relation between foundry name and 'TeX-name' are also provided.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
