@@ -3,7 +3,7 @@ Version:	64477
 Release:	2
 Summary:	Scheme for naming fonts in TeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/info/fontname
+URL:		https://www.ctan.org/tex-archive/info/fontname
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontname.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontname.doc.r%{version}.tar.xz
